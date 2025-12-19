@@ -2,6 +2,7 @@ import React from "react";
 import { Editor } from "./editor";
 import Toolbar from "./toolbar";
 import { Navbar } from "./navbar";
+import { Room } from "./room";
 
 interface PageProps {
   params: Promise<{ documentId: string }>;
@@ -21,7 +22,9 @@ const page = async ({ params }: PageProps) => {
         <Toolbar />
       </div>
       <div className="pt-[114px] print:pt-0">
-        <Editor />
+        <Room>
+          <Editor />
+        </Room>
       </div>
     </div>
   );
