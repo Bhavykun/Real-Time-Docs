@@ -425,6 +425,7 @@ const TextColorButton = () => {
   const value = editor?.getAttributes("textStyle").color || "#000000";
 
   const onChange = (color: ColorResult) => {
+    if (!editor || editor.isDestroyed) return;
     editor?.chain().focus().setColor(color.hex).run();
   };
 
@@ -442,7 +443,7 @@ const TextColorButton = () => {
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="p-0">
-        <SketchPicker color={value} onChange={onChange} />
+        <SketchPicker color={value} onChangeComplete={onChange} />
       </DropdownMenuContent>
     </DropdownMenu>
 
