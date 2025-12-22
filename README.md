@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 📄Real-Time-Docs
 
-First, run the development server:
+A real-time collaborative document editor where multiple users can create, edit, and view documents simultaneously with live updates.
+Built with modern web technologies and designed to scale with additional features.
+
+
+## Live Demo
+
+🔗 https://real-time-docs-wine.vercel.app/
+## Overview
+
+Real-Time Docs is a Google-Docs-style application focused on real-time collaboration.
+Users can work on the same document together and see updates instantly without refreshing the page.
+The core functionality is complete and working.
+The project is open for enhancements and advanced features.
+## Key Features
+
+- Real-time multi-user editing
+- Live synchronization across clients
+- Modern UI with responsive design
+- Scalable architecture
+- Clean and maintainable codebase
+
+
+## Tech Stack
+
+- Next.js – App framework
+- TypeScript – Type safety
+- Tailwind CSS – Styling
+- Liveblocks – Real-time collaboration
+- Vercel – Deployment
+
+
+## Run Locally
+
+Clone the project
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/Bhavykun/Real-Time-Docs.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to the project directory
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd Real-Time-Docs
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Install dependencies
 
-## Learn More
+```bash
+  npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+Configure Environment Variables (add all necessary vars like, clerk's and liveblocks' keys)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  touch .env.local
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Start the server
 
-## Deploy on Vercel
+```bash
+  npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Start the convex client
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+  npx convex dev
+```
+
+
+
+## Contributing
+
+Contributions are always welcome!
+
+See `contributing.md` for ways to get started.
+
+Please adhere to this project's `code of conduct`.
+
